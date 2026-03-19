@@ -3,7 +3,7 @@ using UnityEngine;
 public class SelectorController : MonoBehaviour
 {
     public Transform group;
-    private Transform selected;
+    public Transform selected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
