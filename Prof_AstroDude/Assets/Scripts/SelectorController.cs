@@ -70,10 +70,13 @@ public class SelectorController : MonoBehaviour
             transform.position = selected.position;
         }
 
+        /* 
         if(Input.GetButtonDown("Jump"))
         {
-            Destroy(selected.gameObject);
+            //Destroy(selected.gameObject);
+            selected.GetComponent<BombController>().makeRed();
         }
+        */
 
         /*
         if(Input.GetButtonDown("UP"))

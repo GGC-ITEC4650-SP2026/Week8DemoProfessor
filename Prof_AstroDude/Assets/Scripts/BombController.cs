@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class BombController : MonoBehaviour
 {
+    SelectorController selectCon;
     SpriteRenderer mySprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mySprite = GetComponentInChildren<SpriteRenderer>();        
+        mySprite = GetComponentInChildren<SpriteRenderer>();
+        selectCon = GameObject.Find("Selector").GetComponent<SelectorController>();
     }
 
     public void makeRed()
@@ -17,6 +19,9 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(selectCon.selected == transform && Input.GetButtonDown("Jump"))
+        {
+            makeRed();
+        }
     }
 }
