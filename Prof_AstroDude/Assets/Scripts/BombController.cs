@@ -16,12 +16,21 @@ public class BombController : MonoBehaviour
         mySprite.color = Color.red;
     }
 
+    public void makeNormal()
+    {
+        mySprite.color = Color.white;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(selectCon.selected == transform && Input.GetButtonDown("Jump"))
+        if(selectCon.selected == transform) // {  && Input.GetButtonDown("Jump"))
         {
             makeRed();
+        }
+        else
+        {
+            makeNormal();
         }
     }
 }

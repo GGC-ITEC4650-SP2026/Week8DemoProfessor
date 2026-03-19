@@ -10,6 +10,7 @@ public class SelectorController : MonoBehaviour
     {
         selected = group.GetChild(0);
         transform.position = selected.position;
+        gameObject.SetActive(false);
     }
 
     Transform searchDirection(Vector3 dir)
